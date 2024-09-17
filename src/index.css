@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+}
+
+.slider-nav button {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.lists:hover::after {
+  opacity: 1;
+  transition: opacity ease 1.1s;
+}
+
+* {
+  scrollbar-width: none;
+  /* outline: red 2px solid; */
+}
+
+.footer {
+  font-family: "Poppins", sans-serif;
+}
+
+.atags:hover::after {
+  opacity: 1;
+  transition: opacity ease 1.1s;
+}
+.buttons {
+  border: 1px solid black;
+}
+
+@font-face {
+  font-family: "cgfont";
+  src: url("CenturyGothic.otf");
+}
+.mybtn {
+  border: 1px solid black;
+  transition: 350ms;
+}
+.mybtn2 {
+  transition: 350ms;
+}
+@font-face {
+  font-family: "helvetica";
+  src: url("fonts/HelveticaNeueBold.otf");
+}
+@font-face {
+  font-family: "helveticalight";
+  src: url("fonts/HelveticaNeueLight.otf");
+}
+.myopacity {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.cart {
+  left: calc(100% - 410px);
+}
+
+.mydivb {
+  border-bottom: 1px solid gray;
+}
+.mybtn68 {
+  border-right: 1px solid #f6f6f6;
+}
+:root {
+  --base-font-size: 16px;
+}
+.grid-container {
+  display: grid;
+  height: 80%;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 160px;
+  font-family: helvetica;
+  gap: 0 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  color: #222222;
+
+  grid-template-rows: 1.5fr 0.5fr 9.5fr 9.5fr;
+  grid-template-areas:
+    "sidebar title title title title"
+    "sidebar filter filter filter filter"
+    "sidebar content1 content2 content3 content4"
+    "sidebar content5 content6 content7 content8";
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-rows: 1.5fr 0.5fr 9.5fr 9.5fr 9.5fr;
+    grid-template-areas:
+      "sidebar title title title"
+      "sidebar filter filter filter"
+      "sidebar content1 content2 content3"
+      "sidebar content4 content5 content6"
+      "sidebar content7 content8 .";
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 24px;
+  }
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-rows: 1.5fr 0.5fr 9.5fr 9.5fr 9.5fr 9.5fr;
+    grid-template-areas:
+      "sidebar title title "
+      "sidebar filter filter "
+      "sidebar content1 content2 "
+      "sidebar content3 content4 "
+      "sidebar content5 content6 "
+      "sidebar content7 content8 ";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 24px;
+  }
+}
+@media (max-width: 640px) {
+  .grid-container {
+    grid-template-rows: 1.5fr 0.5fr 9.5fr 9.5fr 9.5fr 9.5fr 9.5fr;
+    grid-template-areas:
+      "sidebar title "
+      "sidebar filter "
+      "sidebar content1 "
+      "sidebar content2 "
+      "sidebar content3 "
+      "sidebar content4 "
+      "sidebar content5 "
+      "sidebar content6 "
+      "sidebar content7 "
+      "sidebar content8 ";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
+  }
+}
